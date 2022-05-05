@@ -14,6 +14,7 @@ def traitement(request):
     pForm = AnimeForm(request.POST)
     if pForm.is_valid():
         anime = pForm.save()
+        anime.save()
         return render(request, 'applicationanime/affichage.html', {'anime': anime})
     else:
         return render(request, 'applicationanime/ajout.html', {'form': pForm})
@@ -25,8 +26,8 @@ def affichage(request, id):
 
 
 def affichetout(request):
-    anime = models.Anime.objects.all()
-    return render(request, 'applicationanime/affichetout.html', {"anime": anime})
+    listAnim = models.Anime.objects.all()
+    return render(request, 'applicationanime/affichetout.html', {"listAnim": listAnim})
 
 
 def ajout(request):
@@ -61,4 +62,17 @@ def updatetraitement(request, id):
 def delete(request, id):
     anime = models.Anime.objects.get(pk=id)
     anime.delete()
-    return HttpResponseRedirect('/applicationanime/')
+    return HttpResponseRedirect('/applicationanime/index/')
+
+#############CRUD n°2######################################CRUD n°2#######################
+#########################CRUD n°2##############CRUD n°2###################################
+#CRUD n°2#################################################################################
+################################################################CRUD n°2#################
+
+def affichage(request, id):
+    site = models.Anime.objects.get(pk=id)
+    return render(request, 'applicationsite/affichage.html', {"site": site})
+
+def affichetout(request):
+    listSite = models.Anime.objects.all()
+    return render(request, 'applicationanime/affichetout.html', {"listSite": listSite})

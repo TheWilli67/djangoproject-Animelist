@@ -15,3 +15,16 @@ class Anime(models.Model):
     def dictionnaire(self):
         return {"titre": self.titre, "auteur": self.auteur, "nombre_episodes": self.nombre_episodes,"url_anime": self.url_anime , "resume": self.resume}
     
+############################################
+
+class Site(models.Model):
+    titre = models.CharField(max_length=100)
+    url_site = models.CharField(max_length=100)
+
+    def __str__(self):
+        chaine = f"{self.titre} et son url : {self.url_site}"
+        return chaine
+    
+    def dictionnaire(self):
+        return {"titre": self.titre, "url":self.url_site}
+    

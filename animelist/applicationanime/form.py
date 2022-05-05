@@ -14,3 +14,16 @@ class AnimeForm(ModelForm):
         'url_anime' : _('url de l"anime'),
         'resume' : _('Résumé'),
     }
+
+class SiteForm(ModelForm):
+    class Meta:
+        model = models.Site
+        fields = ('titre', 'auteur', 'annee_parution', 'nombre_episodes','url_anime','resume')
+        labels = {
+        'titre' : _('Titre'),
+        'auteur' : _('Auteur') ,
+        'annee_parution' : _('date de parution'),
+        'nombre_pages' : _('nombres de pages'),
+        'url_anime' : _('url de l"anime'),
+        'resume' : _('Résumé'),
+    }

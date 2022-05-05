@@ -2,16 +2,20 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'csstemplates/index.css'%}">
     <title>DatAnime Center</title>
 </head>
 
 <body>
+
     <h1>DatAnime Center</h1>
     <li><a href="/applicationanime/ajout/">Formulaire</a></li>
-    <li><a href="/applicationanime/affichetout/{{Anime.id}}">Ta meilleur liste d'anime</a></li>
+    <li>{{i}}<a href="/applicationanime/affichetout/{{i.id}}">Ta meilleur liste d'anime</a></li>
+
 </body>
 
 </html>

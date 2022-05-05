@@ -7,10 +7,12 @@
 </head>
 
 <body>
-    <p> vous avez ajouté l'anime suivant :  </p>
-    <p> {{Anime.titre}} de {{Anime.auteur}} <br>son ID :{{Anime.id}} <br>{{Anime.nombre_episodes}} Episodes <br>Année de parution : {{Anime.annee_parution}}</p>
+    <p> vous avez ajouté l'anime suivant : </p>
+    <p> <a href="{{anime.url_anime}}" target="_blank">{{anime.titre}}</a> de {{anime.auteur}} <br>son ID :{{anime.id}}
+        <br>{{anime.nombre_episodes}} Episodes <br>Année de
+        parution : {{anime.annee_parution}}</p>
     <p>Resumé :</p>
-    <p>{{Anime.resume}}</p>
+    <p>{{anime.resume}}</p>
 </body>
 
 </html>
