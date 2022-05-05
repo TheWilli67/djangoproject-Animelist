@@ -10,16 +10,16 @@
 
 
     {% if id != none %}
-        <h1>Modif anime</h1>
-        <form method="POST" action="/applicationanime/updatetraitement/{{id}}/">
+        <h1>Fenêtre de modification des paramètres du site</h1>
+        <form method="POST" action="/applicationanime/updatetraitementsite/{{id}}/">
     {% else %}
         <h1>saisie d'un nouvel anime</h1>
-        <form method="POST" action="/applicationanime/traitement/">
+        <form method="POST" action="/applicationanime/traitementsite/">
     {% endif %}
 
             {% csrf_token %}
             {{ form.as_ul }}
-            <input type="submit" value="Send DatAnime" \>
+            <input type="submit" value="Send to DatAnim" \>
         </form>
 </body>
 

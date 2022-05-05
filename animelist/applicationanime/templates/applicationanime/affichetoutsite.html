@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    {% for i in listAnim %}
+    {% for i in listSite %}
     <p> ID :{{i.id}} <br> titre : {{i.titre}} <br> Auteur : {{i.auteur}} <br><a
-            href="/applicationanime/affichage/{{i.id}}"> Aller regarder </a> </p>
-    <a href="/applicationanime/update/{{i.id}}"> modifier </a></li><br> <a href="/applicationanime/delete/{{i.id}}">
+            href="/applicationanime/affichagesite/{{i.id}}"> Aller au site </a> </p>
+    <a href="/applicationanime/updatesite/{{i.id}}"> Paramètres </a></li><br> <a href="/applicationanime/deletesite/{{i.id}}">
         supprimer </a></li>
     {% endfor %}
 </body>

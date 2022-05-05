@@ -25,6 +25,6 @@ class Site(models.Model):
         chaine = f"{self.titre} et son url : {self.url_site}"
         return chaine
     
-    def dictionnaire(self):
+    def dictionnairesite(self):
         return {"titre": self.titre, "url":self.url_site}
     
