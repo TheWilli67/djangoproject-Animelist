@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% for i in Anime %}
+    <p> ID :{{i.id}} <br> titre : {{i.titre}} <br> Auteur : {{i.auteur}} <br><a href="/applicationanime/affichage/{{i.id}}"> aller jetter a oeuil </a> </p>
+    <a href="/applicationanime/update/{{i.id}}"> modifier cette entrées</a></li> <a href="/applicationanime/delete/{{i.id}}">supprimer cette entrée</a></li>
+    {% endfor %}
+</body>
+
+</html> 

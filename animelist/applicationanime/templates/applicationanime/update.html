@@ -1,0 +1,5 @@
+<form method="POST" action="/applicationanime/update/{{Anime.id}}">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Send DatAnime" \>
+</form>
