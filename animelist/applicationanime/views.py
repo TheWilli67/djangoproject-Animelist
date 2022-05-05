@@ -100,20 +100,20 @@ def ajoutsite(request):
     
 def updatesite(request, id):
     site = models.Site.objects.get(pk=id)
-    form = AnimeForm(site.dictionnairesite())
+    form = SiteForm(site.dictionnairesite())
     return render(request, "applicationanime/ajoutsite.html", {"form": form, "id":id})
 
 def updatetraitementsite(request, id):
-    pForm = AnimeForm(request.POST)
+    pForm = SiteForm(request.POST)
     if pForm.is_valid():
         site = pForm.save(commit=False)
         site.id = id
         site.save()
-        return render(request, 'applicationsanime/affichagesite.html', {'site': site})
+        return render(request, 'applicationanime/affichagesite.html', {'site': site})
     else:
         return render(request, 'applicationanime/ajoutsite.html', {'form': pForm})
 
 def deletesite(request, id):
-    site = models.Anime.objects.get(pk=id)
+    site = models.Site.objects.get(pk=id)
     site.delete()
     return HttpResponseRedirect('/applicationanime/index/')

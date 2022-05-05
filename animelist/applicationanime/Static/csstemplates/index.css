@@ -1,15 +1,21 @@
 body{
     font-family: 'PT Sans', sans-serif;
     margin: 0%;
-    padding: 0%;
+    padding-left: 2%;
+    padding-right: 2%;
     background-color: #f6f6f6;
     background-image: linear-gradient(315deg, #f6f6f6 0%, #e9e9e9 74%);
 }
 .DatanimeTitle{
     text-align: center; 
+    padding: 0%;
 }
 .navigation{
+
     text-decoration: none;
     color: black;
-    padding-left: 1%;
+    padding: 1%;
+}
+.ol_nav{
+    text-align: center;  
 }

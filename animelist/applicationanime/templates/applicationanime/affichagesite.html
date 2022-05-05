@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
+
+    {% load static %}
     <meta charset="UTF-8">
-    <title>ajout d’un Anime</title>
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&family=PT+Sans&family=Source+Sans+Pro:wght@200&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%static 'csstemplates/index.css'%}">
+    <title>DatAnime Center</title>
 
 <body>
+    <ol class="ol_nav">
+        <h1 class="DatanimeTitle">DatAnime Center</h1>
+        <a class="navigation" href="/applicationanime/ajout/">Formulaire anime </a>
+        <a class="navigation" href="/applicationanime/ajoutsite/">Formulaire site de streaming </a>
+        <a class="navigation" href="/applicationanime/affichetout/{{i.id}}">Ta meilleur liste d'anime</a>
+        <a class="navigation" href="/applicationanime/affichetoutsite/{{i.id}}">Ta liste de site de streaming</a>
+    </ol>
     <p> vous avez ajouté l'anime suivant : </p>
-    <p> <a href="{{site.url_anime}}" target="_blank">{{site.titre}}</a><br>son ID :{{site.id}}
+    <p> <a href="{{Site.url_anime}}" target="_blank">{{site.titre}}</a>
 </body>
 
 </html>

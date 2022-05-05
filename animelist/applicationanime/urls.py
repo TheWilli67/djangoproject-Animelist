@@ -16,4 +16,6 @@ urlpatterns = [
     path('updatesite/<int:id>/',views.updatesite),
     path('deletesite/<int:id>/', views.deletesite),
     path('traitementsite/', views.traitementsite),
+    path('affichagesite/<int:id>/',views.affichagesite),
+    path('updatetraitementsite/<int:id>/', views.updatetraitementsite),
 ]
