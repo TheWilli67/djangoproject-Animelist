@@ -31,7 +31,6 @@
         <h1>saisie d'un nouvel anime</h1>
         <form method="POST" action="/applicationanime/traitement/">
             {% endif %}
-
             {% csrf_token %}
             {{ form.as_ul }}
             <input type="submit" value="Send DatAnime" \>

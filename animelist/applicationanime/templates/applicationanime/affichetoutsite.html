@@ -24,11 +24,12 @@
         <a class="navigation" href="/applicationanime/affichetoutsite/{{i.id}}">Ta liste de site de streaming</a>
     </ol>
     {% for i in listSite %}
-    <p> ID :{{i.id}} <br> titre : {{i.titre}} <br> Auteur : {{i.auteur}} <br><a
-            href="/applicationanime/affichagesite/{{i.id}}"> Aller au site </a> </p>
-    <a href="/applicationanime/updatesite/{{i.id}}"> Paramètres </a></li><br> <a
+    <p> ID :{{i.id}} <br> titre : <br>{{i.titre}} <br><a href="/applicationanime/affichagesite/{{i.id}}"> Aller au site
+        </a>
+    </p>
+    <a href="/applicationanime/updatesite/{{i.id}}"> Paramètres </a></li> <a
         href="/applicationanime/deletesite/{{i.id}}">
-        supprimer </a></li>
+        Supprimer </a></li>
     {% endfor %}
 </body>
 
