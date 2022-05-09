@@ -1,36 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&family=PT+Sans&family=Source+Sans+Pro:wght@200&family=Ubuntu:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{%static 'csstemplates/index.css'%}">
-    <title>DatAnime Center</title>
+<title>DatAnime Center</title>
+{% extends 'main.html' %}
+{% block content %}
 
 <body>
-    <ol class="ol_nav">
-        <h1 class="DatanimeTitle">DatAnime Center</h1>
-        <a class="navigation" href="/applicationanime/ajout/">Formulaire anime </a>
-        <a class="navigation" href="/applicationanime/ajoutsite/">Formulaire site de streaming </a>
-        <a class="navigation" href="/applicationanime/affichetout/{{i.id}}">Ta meilleur liste d'anime</a>
-        <a class="navigation" href="/applicationanime/affichetoutsite/{{i.id}}">Ta liste de site de streaming</a>
-    </ol>
     {% for i in listSite %}
-    <p> ID :{{i.id}} <br> titre : <br>{{i.titre}} <br><a href="/applicationanime/affichagesite/{{i.id}}"> Aller au site
-        </a>
-    </p>
-    <a href="/applicationanime/updatesite/{{i.id}}"> Paramètres </a></li> <a
-        href="/applicationanime/deletesite/{{i.id}}">
-        Supprimer </a></li>
+    <p>Titre : <a href="{{i.url_site}}" target="_blank">{{i.titre}}</a> <br> ID N°{{i.id}} </p>
+    <li><a href="/applicationanime/updatesite/{{i.id}}"> Paramètres </a></li>
+    <li><a href="/applicationanime/deletesite/{{i.id}}"> Supprimer </a></li>
     {% endfor %}
 </body>
 
 </html>
+{% endblock %}

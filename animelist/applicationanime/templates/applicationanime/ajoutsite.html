@@ -1,35 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&family=PT+Sans&family=Source+Sans+Pro:wght@200&family=Ubuntu:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{%static 'csstemplates/index.css'%}">
-    <title>DatAnime Center</title>
+<title>DatAnime Center</title>
+{% extends 'main.html' %}
+{% block content %}
 </head>
 
 <body>
-    <ol class="ol_nav">
-        <h1 class="DatanimeTitle">DatAnime Center</h1>
-        <a class="navigation" href="/applicationanime/ajout/">Formulaire anime </a>
-        <a class="navigation" href="/applicationanime/ajoutsite/">Formulaire site de streaming </a>
-        <a class="navigation" href="/applicationanime/affichetout/{{i.id}}">Ta meilleur liste d'anime</a>
-        <a class="navigation" href="/applicationanime/affichetoutsite/{{i.id}}">Ta liste de site de streaming</a>
-    </ol>
-
     {% if id != none %}
     <h1>Fenêtre de modification des paramètres du site</h1>
     <form method="POST" action="/applicationanime/updatetraitementsite/{{id}}/">
         {% else %}
-        <h1>saisie d'un nouvel anime</h1>
+        <h1>Saisie d'un nouveau site</h1>
         <form method="POST" action="/applicationanime/traitementsite/">
             {% endif %}
 
@@ -40,3 +19,4 @@
 </body>
 
 </html>
+{% endblock %}
