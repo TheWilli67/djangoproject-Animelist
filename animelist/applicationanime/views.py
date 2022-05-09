@@ -62,7 +62,7 @@ def updatetraitement(request, id):
 def delete(request, id):
     anime = models.Anime.objects.get(pk=id)
     anime.delete()
-    return HttpResponseRedirect('/applicationanime/')
+    return HttpResponseRedirect('/applicationanime/affichetout.html')
 
 #############CRUD n°2######################################CRUD n°2#######################
 #########################CRUD n°2##############CRUD n°2###################################

@@ -12,13 +12,13 @@ body{
 }
 .DatanimeTitle{
     text-align: center; 
+    
     padding: 0%;
 }
 .navigation{
-
     text-decoration: none;
     color: black;
-    padding: 1%;
+    margin-right:3%;
 }
 .ol_nav{
     text-align: center;  
@@ -29,6 +29,27 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-.rainbow{
-
+.flex{
+    display: flex;
+    flex-wrap: wrap;
 }
+.div_content{
+    display: block;
+}
+.modif{
+    margin-top: 0%;
+    padding-top: 0%;
+}
+li{
+    list-style-type: none;
+}
+.modif_delete{
+    text-decoration: none;
+    color: black;
+}
+.usedlinks{
+    color: blue;
+}
+
+/**************************************************/
+

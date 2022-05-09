@@ -5,11 +5,12 @@
 
 <body>
     {% for i in listAnim %}
-    <p> ID N°{{i.id}} <br> titre : <a href="{{i.url_anime}}" target="_blank">{{i.titre}}</a> <br> Auteur : {{i.auteur}}
+    <p> ID N°{{i.id}} <br> titre : <a class="usedlinks" href="{{i.url_anime}}" target="_blank">{{i.titre}}</a> <br>
+        Auteur : {{i.auteur}}
     </p>
-    <li><a href="/applicationanime/affichage/{{i.id}}"> Aller regarder </a></li>
-    <li><a href="/applicationanime/update/{{i.id}}"> Modifier </a></li>
-    <li><a href="/applicationanime/delete/{{i.id}}">Supprimer </a></li>
+    <li><a class="modif_delete" href="/applicationanime/affichage/{{i.id}}"> Aller regarder </a></li>
+    <li><a class="modif_delete" href="/applicationanime/update/{{i.id}}"> Modifier </a></li>
+    <li><a class="modif_delete" href="/applicationanime/delete/{{i.id}}">Supprimer </a></li>
     {% endfor %}
 </body>
 
