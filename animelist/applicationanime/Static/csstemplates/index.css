@@ -1,6 +1,6 @@
 body{
     font-family: 'PT Sans', sans-serif;
-    font-size: 125%;
+    font-size: 100%;
     margin: 5%;
     padding-left: 5%;
     padding-right: 5%;
@@ -8,7 +8,6 @@ body{
     background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
 }
 .content{
-    margin: 5%;
 }
 .DatanimeTitle{
     text-align: center; 
@@ -29,10 +28,7 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-.flex{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .div_content{
     display: block;
 }

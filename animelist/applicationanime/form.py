@@ -23,12 +23,3 @@ class SiteForm(ModelForm):
         'titre' : _('Titre'),
         'url_anime' : _('url de l"anime'),
     }
-        
-class CommentaireForm(ModelForm):
-    class Meta:
-        model = models.Commentaire
-        fields = ('pseudo','url_site')
-        labels = {
-        'pseudo': _('pseudo'),
-        'text' : _('Texte :'),
-    }
