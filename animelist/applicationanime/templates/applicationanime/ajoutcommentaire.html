@@ -1,0 +1,20 @@
+<title>DatAnime Center</title>
+{% extends 'main.html' %}
+{% block content %}
+
+<body>
+    {% if id != none %}
+    <h1>Fenêtre de modification de ton commentaire</h1>
+    <form method="POST" action="/applicationanime/updatetraitementcommentaire/{{id}}/">
+        {% else %}
+        <h1>saisie d'un nouveau commentaire</h1>
+        <form method="POST" action="/applicationanime/traitementcommentaire/">
+            {% endif %}
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Send DatAnime" \>
+        </form>
+</body>
+
+</html>
+{% endblock %}

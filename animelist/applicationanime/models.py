@@ -27,4 +27,17 @@ class Site(models.Model):
     
     def dictionnairesite(self):
         return {"titre": self.titre, "url":self.url_site}
+
+###############################################
+
+
+class Commentaire(models.Model):
+    pseudo = models.CharField(max_length=20)
+    text = models.CharField(max_length=100)
+
+    def __str__(self):
+        chaine = f"{self.pseudo} et son url : {self.text}"
+        return chaine
     
+    def dictionnairecommentaire(self):
+        return {"pseudo": self.pseudo, "text":self.text}

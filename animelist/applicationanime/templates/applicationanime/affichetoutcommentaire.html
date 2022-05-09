@@ -1,0 +1,18 @@
+<title>DatAnime Center</title>
+{% extends 'main.html' %}
+{% block content %}
+</head>
+
+<body>
+    {% for i in listcommentaire %}
+    <p> ID N°{{i.id}} <br> From : {{i.pseudo}}</a> <br>
+        Commentaire : {{i.text}}
+    </p>
+    <li><a class="modif_delete" href="/applicationanime/affichagecommentaire/{{i.id}}"> Aller regarder </a></li>
+    <li><a class="modif_delete" href="/applicationanime/updatecommentaire/{{i.id}}"> Modifier </a></li>
+    <li><a class="modif_delete" href="/applicationanime/deletecommentaire/{{i.id}}">Supprimer </a></li>
+    {% endfor %}
+</body>
+
+</html>
+{% endblock %}

@@ -1,4 +1,4 @@
-from .form import AnimeForm, SiteForm
+from .form import AnimeForm, SiteForm, CommentaireForm
 from django.utils.translation import gettext_lazy as _
 from . import models
 from django.shortcuts import render
@@ -88,7 +88,7 @@ def traitementsite(request):
 
 def ajoutsite(request):
     if request.method == "POST":
-        form = AnimeForm(request)
+        form = SiteForm(request)
         if form.is_valid():
             site = form.save()
             return render(request, "applicationanime/affichagesite.html", {"site": site})
@@ -117,3 +117,57 @@ def deletesite(request, id):
     site = models.Site.objects.get(pk=id)
     site.delete()
     return HttpResponseRedirect('/applicationanime/affichetoutsite/')
+
+######################################################################################
+######################################################################################
+#Crud commentaire#####################################################################
+######################################################################################
+
+def affichagecommentaire(request, id):
+    commentaire = models.Commentaire.objects.get(pk=id)
+    return render(request, 'applicationanime/affichagecommentaire.html', {"commentaire": commentaire})
+
+def affichetoutcommentaire(request):
+    listCommentaire = models.Commentaire.objects.all()
+    return render(request, 'applicationanime/affichetoutcommentaire.html', {"listCommentaire": listCommentaire})
+
+def traitementcommentaire(request):
+    pForm = CommentaireForm(request.POST)
+    if pForm.is_valid():
+        commentaire = pForm.save()
+        commentaire.save()
+        return render(request, 'applicationanime/affichagecommentaire.html', {'commentaire': commentaire})
+    else:
+        return render(request, 'applicationanime/ajoutcommentaire.html', {'form': pForm})
+
+def ajoutcommentaire(request):
+    if request.method == "POST":
+        form = CommentaireForm(request)
+        if form.is_valid():
+            commentaire = form.save()
+            return render(request, "applicationanime/affichagecommentaire.html", {"commentaire": commentaire})
+        else:
+            return render(request, "applicationanime/ajoutcommentaire.html", {"form": form})
+    else:
+        form = CommentaireForm()
+        return render(request, "applicationanime/ajoutcommentaire.html", {"form": form})
+    
+def updatecommentaire(request, id):
+    commentaire = models.Commentaire.objects.get(pk=id)
+    form = CommentaireForm(site.dictionnairecommentaire())
+    return render(request, "applicationanime/ajoutcommentaire.html", {"form": form, "id":id})
+
+def updatetraitementcommentaire(request, id):
+    pForm = CommentaireForm(request.POST)
+    if pForm.is_valid():
+        commentaire = pForm.save(commit=False)
+        commentaire.id = id
+        commentaire.save()
+        return render(request, 'applicationanime/affichagecommentaire.html', {'commentaire': commentaire})
+    else:
+        return render(request, 'applicationanime/ajoutcommentaire.html', {'form': pForm})
+
+def deletecommentaire(request, id):
+    commentaire = models.Commentaire.objects.get(pk=id)
+    commentaire.delete()
+    return HttpResponseRedirect('/applicationanime/affichetoutcommentaire/')

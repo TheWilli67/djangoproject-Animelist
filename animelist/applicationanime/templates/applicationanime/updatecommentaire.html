@@ -1,0 +1,12 @@
+<title>DatAnime Center</title>
+{% extends 'main.html' %}
+{% block content %}
+
+<body>
+    <form method="POST" action="/applicationanime/updatecommentaire/{{i.id}}">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Send to DatAnime" \>
+    </form>
+</body>
+{% endblock %}

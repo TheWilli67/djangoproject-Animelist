@@ -9,6 +9,7 @@ urlpatterns = [
     path('ajout/', views.ajout),
     path('affichage/<int:id>/',views.affichage),
     path('update/<int:id>/',views.update),
+    path('affichetout/', views.affichetout),
     path('updatetraitement/<int:id>/', views.updatetraitement),
     path('delete/<int:id>/', views.delete),
     path('affichetoutsite/', views.affichetoutsite),
@@ -18,4 +19,9 @@ urlpatterns = [
     path('traitementsite/', views.traitementsite),
     path('affichagesite/<int:id>/',views.affichagesite),
     path('updatetraitementsite/<int:id>/', views.updatetraitementsite),
+    path('updatecommentaire/<int:id>/', views.updatecommentaire),
+    path('affichagecommentaire/<int:id>/', views.affichagecommentaire),
+    path('ajoutcommentaire/', views.ajoutcommentaire),
+    path('affichetoutcommentaire/', views.affichetoutcommentaire),
+    path('traitementcommentaire/', views.traitementcommentaire),
 ]

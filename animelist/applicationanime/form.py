@@ -27,7 +27,7 @@ class SiteForm(ModelForm):
 class CommentaireForm(ModelForm):
     class Meta:
         model = models.Commentaire
-        fields = ('pseudo','url_site')
+        fields = ('pseudo','text',)
         labels = {
         'pseudo': _('pseudo'),
         'text' : _('Texte :'),
