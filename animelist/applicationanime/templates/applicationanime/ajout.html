@@ -3,18 +3,18 @@
 {% block content %}
 
 <body>
-    {% if id != none %}
-    <h1>Fenêtre de modification des paramètres de l'anime saisi</h1>
-    <form method="POST" action="/applicationanime/updatetraitement/{{id}}/">
-        {% else %}
-        <h1>saisie d'un nouvel anime</h1>
-        <form method="POST" action="/applicationanime/traitement/">
-            {% endif %}
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Send DatAnime" \>
-        </form>
+    <div class="allaffiche">
+        {% if id != none %}
+        <h1>Fenêtre de modification des paramètres de l'anime saisi</h1>
+        <form method="POST" action="/applicationanime/updatetraitement/{{id}}/">
+            {% else %}
+            <h1>Saisie d'un nouvel anime</h1>
+            <form method="POST" action="/applicationanime/traitement/">
+                {% endif %}
+                {% csrf_token %}{{ form.as_p }}
+                <input class="submitbutton" type="submit" value="Send DatAnime" \>
+            </form>
+    </div>
 </body>
-
 </html>
 {% endblock %}

@@ -19,7 +19,7 @@ class Anime(models.Model):
 
 class Site(models.Model):
     titre = models.CharField(max_length=100)
-    url_site = models.CharField(max_length=100)
+    url_site = models.CharField(max_length=150)
 
     def __str__(self):
         chaine = f"{self.titre} et son url : {self.url_site}"

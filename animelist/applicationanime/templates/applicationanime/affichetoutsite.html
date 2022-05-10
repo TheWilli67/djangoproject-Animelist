@@ -3,12 +3,21 @@
 {% block content %}
 
 <body>
-    {% for i in listSite %}
-    <p><a class="usedlinks" href="{{i.url_site}}" target="_blank">{{i.titre}}</a> <br> ID N°{{i.id}} </p>
-    <li><a class="modif_delete" href="/applicationanime/updatesite/{{i.id}}">Paramètres</a></li>
-    <li><a class="modif_delete" href="/applicationanime/deletesite/{{i.id}}">Supprimer</a></li>
-    {% endfor %}
+    <div class="allaffiche">
+        <h1> Liste de site :</h1>
+        {% for i in listSite %}
+        <div class="bordering">
+            <div class="informations">
+                <p><a class="usedlinks" href="{{i.url_site}}" target="_blank">{{i.titre}}</a> <br> ID N°{{i.id}}
+                </p>
+            </div>
+            <div class="delmodifdetail">
+                <li><a class="modif_delete" href="/applicationanime/updatesite/{{i.id}}">Paramètres</a></li>
+                <li><a class="modif_delete" href="/applicationanime/deletesite/{{i.id}}">Supprimer</a></li>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </body>
-
 </html>
 {% endblock %}

@@ -4,19 +4,20 @@
 </head>
 
 <body>
-    {% if id != none %}
-    <h1>Fenêtre de modification des paramètres du site</h1>
-    <form method="POST" action="/applicationanime/updatetraitementsite/{{id}}/">
-        {% else %}
-        <h1>Saisie d'un nouveau site</h1>
-        <form method="POST" action="/applicationanime/traitementsite/">
-            {% endif %}
+    <div class="allaffiche">
+        {% if id != none %}
+        <h1>Fenêtre de modification des paramètres du site</h1>
+        <form method="POST" action="/applicationanime/updatetraitementsite/{{id}}/">
+            {% else %}
+            <h1>Saisie d'un nouveau site</h1>
+            <form method="POST" action="/applicationanime/traitementsite/">
+                {% endif %}
 
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Send to DatAnim" \>
-        </form>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="submitbutton" type="submit" value="Send to DatAnim" \>
+            </form>
+    </div>
 </body>
-
 </html>
 {% endblock %}
