@@ -7,10 +7,10 @@
     <div class="allaffiche">
         {% if id != none %}
         <h1>Fenêtre de modification des paramètres du site</h1>
-        <form method="POST" action="/applicationanime/updatetraitementsite/{{id}}/">
+        <form method="POST" action="/updatetraitementsite/{{id}}/">
             {% else %}
             <h1>Saisie d'un nouveau site</h1>
-            <form method="POST" action="/applicationanime/traitementsite/">
+            <form method="POST" action="/traitementsite/">
                 {% endif %}
 
                 {% csrf_token %}

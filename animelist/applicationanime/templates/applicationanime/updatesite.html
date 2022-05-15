@@ -4,7 +4,7 @@
 
 <body>
     <div class="allaffiche">
-        <form method="POST" action="/applicationanime/updatesite/{{i.id}}">
+        <form method="POST" action="/updatesite/{{i.id}}">
             {% csrf_token %}
             {{ form.as_ul }}
             <input type="submit" value="Send to DatAnime" \>

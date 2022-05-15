@@ -62,7 +62,7 @@ def updatetraitement(request, id):
 def delete(request, id):
     anime = models.Anime.objects.get(pk=id)
     anime.delete()
-    return HttpResponseRedirect('/applicationanime/affichetout.html')
+    return HttpResponseRedirect('/affichetout/')
 
 #############CRUD n°2######################################CRUD n°2#######################
 #########################CRUD n°2##############CRUD n°2###################################
@@ -74,8 +74,8 @@ def affichagesite(request, id):
     return render(request, 'applicationanime/affichagesite.html', {"site": site})
 
 def affichetoutsite(request):
-    listSite = models.Site.objects.all()
-    return render(request, 'applicationanime/affichetoutsite.html', {"listSite": listSite})
+    listSit = models.Site.objects.all()
+    return render(request, 'applicationanime/affichetoutsite.html', {"listSit": listSit})
 
 def traitementsite(request):
     pForm = SiteForm(request.POST)
@@ -116,4 +116,4 @@ def updatetraitementsite(request, id):
 def deletesite(request, id):
     site = models.Site.objects.get(pk=id)
     site.delete()
-    return HttpResponseRedirect('/applicationanime/affichetoutsite/')
+    return HttpResponseRedirect('/affichetoutsite/')

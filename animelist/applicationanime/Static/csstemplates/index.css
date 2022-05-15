@@ -26,8 +26,10 @@ margin-bottom: 3%;
 }
 .DatanimeTitle{
     text-align: center; 
-    
+    color: white;
+    text-decoration: none;
     padding: 0%;
+    cursor: pointer;
 }
 .navigation{
     text-decoration: none;
@@ -38,8 +40,8 @@ margin-bottom: 3%;
     text-align: center;  
 }
 .gif{
-    width: 69%;
-    margin: 2%;
+    width: 70%;
+    margin-top: 6%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -73,7 +75,7 @@ form{
     float: left;
 }
 .delmodifdetail{
-    padding: 5%;
+    padding-top: 2%;
     padding-left: 10%;
 }
 .informations{

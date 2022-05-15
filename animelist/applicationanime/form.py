@@ -18,8 +18,9 @@ class AnimeForm(ModelForm):
 class SiteForm(ModelForm):
     class Meta:
         model = models.Site
-        fields = ('titre','url_site',)
+        fields = ('titre','tarif','url_site', )
         labels = {
         'titre' : _('Titre'),
-        'url_anime' : _('url de l"anime'),
+        'tarif' : _('Tarif annuel'),
+        'url_anime' : _('url de l anime'),
     }

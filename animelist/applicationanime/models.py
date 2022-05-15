@@ -19,12 +19,13 @@ class Anime(models.Model):
 
 class Site(models.Model):
     titre = models.CharField(max_length=100)
+    tarif = models.IntegerField(blank=False)
     url_site = models.CharField(max_length=150)
 
     def __str__(self):
-        chaine = f"{self.titre} et son url : {self.url_site}"
+        chaine = f"{self.titre} {self.tarif} son url : {self.url_site}"
         return chaine
     
     def dictionnairesite(self):
-        return {"titre": self.titre, "url":self.url_site}
+        return {"titre": self.titre,"tarif": self.tarif, "url":self.url_site}
     
