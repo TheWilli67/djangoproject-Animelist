@@ -17,4 +17,3 @@ il est possible pour les 2 crud de modifier, supprimer.
 
 -   Le crud Site d'anime est moins fournis en information car l'utilitée principale d'un site de streaming est de savoir son lien et son nom.
 
-<iframe src="https://giphy.com/embed/4ilFRqgbzbx4c" width="448" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/smoking-cowboy-bebop-4ilFRqgbzbx4c">via GIPHY</a></p>
