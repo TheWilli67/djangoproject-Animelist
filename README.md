@@ -5,7 +5,7 @@ School project for Django use (don't forget to "cd animelist" to runserver )
 the project is about Animelist on differents websites from Crunchyroll/ADN/Wakanim
 
 Dans un premier temps pour accéder a l'accueil dans la barre de recherche c'est : 
-http://127.0.0.1:8000/
+http://127.0.0.1:8000/index/
 👍
 le lien pour accéder a la page d'accueil est de tel sorte que nous n'avons pas besoin de tapper les requêtes dans le navigateur autre que celle de la page d'accueil (même voir aucune requête car il y a uniquement besoin de faire un "ctrl + clique" pour accéder au contenu
 )
