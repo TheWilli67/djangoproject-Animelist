@@ -3,12 +3,15 @@
 {% block content %}
 
 <body>
-    <div class="allaffiche">
-        <form method="POST" action="/update/{{i.id}}">
-            {% csrf_token %}
-            {{ form.as_ul }}
-            <input type="submit" value="Send to DatAnime" \>
-        </form>
+
+    <div class="premiererplan">
+        <div class="internal">
+            <form method="POST" action="/update/{{i.id}}">
+                {% csrf_token %}
+                {{ form.as_ul }}
+                <input type="submit" value="Send to DatAnime" \>
+            </form>
+        </div>
     </div>
 </body>
 {% endblock %}

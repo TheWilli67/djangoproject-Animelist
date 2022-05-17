@@ -4,25 +4,27 @@
 </head>
 
 <body>
-    <div class="allaffiche">
-        <h1>Liste des animes</h1>
-        {% for i in listAnim %}
-        <div class="bordering">
-            <div class="informations">
-                <p>Titre : <a class="usedlinks" href="{{i.url_anime}}" target="_blank">{{i.titre}}</a>
-                    <br>
-                    ID N°{{i.id}}
-                    <br>
-                    Éditeur : {{i.auteur}}
-                </p>
+    <div class="premiererplan">
+        <div class="internal">
+            <h1>Liste des animes</h1>
+            {% for i in listAnim %}
+            <div class="bordering">
+                <div class="informations">
+                    <p>Titre : <a class="usedlinks" href="{{i.url_anime}}" target="_blank">{{i.titre}}</a>
+                        <br>
+                        ID N°{{i.id}}
+                        <br>
+                        Éditeur : {{i.auteur}}
+                    </p>
+                </div>
+                <div class="delmodifdetail">
+                    <li><a class="modif_delete" href="/affichage/{{i.id}}"> Détail </a></li>
+                    <li><a class="modif_delete" href="/update/{{i.id}}"> Modifier </a></li>
+                    <li><a class="modif_delete" href="/delete/{{i.id}}">Supprimer </a></li>
+                </div>
             </div>
-            <div class="delmodifdetail">
-                <li><a class="modif_delete" href="/affichage/{{i.id}}"> Détail </a></li>
-                <li><a class="modif_delete" href="/update/{{i.id}}"> Modifier </a></li>
-                <li><a class="modif_delete" href="/delete/{{i.id}}">Supprimer </a></li>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </body>
 

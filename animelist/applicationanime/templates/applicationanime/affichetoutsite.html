@@ -3,21 +3,25 @@
 {% block content %}
 
 <body>
-    <div class="allaffiche">
-        <h1> Liste de site :</h1>
-        {% for i in listSit %}
-        <div class="bordering">
-            <div class="informations">
-                <p><a class="usedlinks" href="{{i.url_site}}" target="_blank">{{i.titre}}</a> <br> {{i.tarif}} € <br>ID
-                    N°{{i.id}}
-                </p>
+    <div class="premiererplan">
+        <div class="internal">
+            <h1> Liste de site :</h1>
+            {% for i in listSit %}
+            <div class="bordering">
+                <div class="informations">
+                    <p><a class="usedlinks" href="{{i.url_site}}" target="_blank">{{i.titre}}</a> <br> {{i.tarif}} €
+                        <br>ID
+                        N°{{i.id}}
+                    </p>
+                </div>
+                <div class="delmodifdetail">
+                    <li><a class="modif_delete" href="/updatesite/{{i.id}}">Paramètres</a></li>
+                    <li><a class="modif_delete" href="/deletesite/{{i.id}}">Supprimer</a></li>
+                </div>
+
             </div>
-            <div class="delmodifdetail">
-                <li><a class="modif_delete" href="/updatesite/{{i.id}}">Paramètres</a></li>
-                <li><a class="modif_delete" href="/deletesite/{{i.id}}">Supprimer</a></li>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </body>
 

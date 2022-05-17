@@ -2,8 +2,6 @@ body{
     font-family: 'PT Sans', sans-serif;
     font-size: 100%;
     margin: 0%;
-    background-color: #c3cbdc;
-    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
 }
 .modif_delete {
     text-decoration: none;
@@ -13,8 +11,10 @@ body{
 .usedlinks {
     color: blue;
 }
-.maintitle{
-margin-bottom: 3%;
+.back{
+    background-image: url(https://c.wallhere.com/photos/fe/26/anime_compilation-1441857.jpg!d);
+    background-size: cover;
+    margin: 0%;
 }
 .content{
     margin: 0%;
@@ -22,13 +22,25 @@ margin-bottom: 3%;
     background-color: rgb(48, 48, 48);
     color: white;
     padding-bottom: 0.1%;
-
+}
+.premiererplan{
+    margin: 0%;
+    background-color: #c3cbdc;
+    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+    margin-left: 15%;
+    margin-right: 15%;
+    height:100% ;
+}
+.internal{
+    margin: 5%;
+    margin-top: 0%;
+    padding-top: 1%;
 }
 .DatanimeTitle{
     text-align: center; 
     color: white;
     text-decoration: none;
-    padding: 0%;
+    padding: 0.2%;
     cursor: pointer;
 }
 .navigation{
@@ -47,7 +59,6 @@ margin-bottom: 3%;
     margin-right: auto;
     
 }
-
 .div_content{
     display: block;
 }
@@ -62,21 +73,17 @@ form{
     margin-left: 5%;
     margin-right:5% ;
 }
-.allaffiche{
-    margin-left: 5%;
-    margin-right: 5%;
-}
 .bordering{
     display: flex;
     flex-wrap: wrap;
     width: 45%;
-    border: solid black;
+    border: double;
     margin: 1%;
     float: left;
 }
 .delmodifdetail{
-    padding-top: 2%;
-    padding-left: 10%;
+    padding-top: 3%;
+    padding-left: 15%;
 }
 .informations{
     padding-left: 10%;
@@ -94,4 +101,12 @@ input{
 textarea{
     margin-top: 2%;
 }
-
+label{
+    float: left;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+textarea{
+    width: 100%;
+    height: 10%;
+}

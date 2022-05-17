@@ -1,11 +1,11 @@
 from django.db import models
 
 class Anime(models.Model):
-    titre = models.CharField(max_length=100)
-    auteur = models.CharField(max_length=100)
-    annee_parution = models.CharField(max_length=100)
+    titre = models.CharField(max_length=50)
+    auteur = models.CharField(max_length=50)
+    annee_parution = models.CharField(max_length=50)
     nombre_episodes = models.IntegerField(blank=False)
-    url_anime = models.CharField(max_length=100)
+    url_anime = models.CharField(max_length=150)
     resume = models.TextField(null=True, blank=True)
 
     def __str__(self):
@@ -19,7 +19,7 @@ class Anime(models.Model):
 
 class Site(models.Model):
     titre = models.CharField(max_length=100)
-    tarif = models.IntegerField(blank=False)
+    tarif = models.CharField(max_length=10)
     url_site = models.CharField(max_length=150)
 
     def __str__(self):
