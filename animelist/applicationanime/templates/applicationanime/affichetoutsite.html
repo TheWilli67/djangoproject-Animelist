@@ -8,7 +8,8 @@
         {% for i in listSit %}
         <div class="bordering">
             <div class="informations">
-                <p><a class="usedlinks" href="{{i.url_site}}" target="_blank">{{i.titre}}</a> <br> ID N°{{i.id}}
+                <p><a class="usedlinks" href="{{i.url_site}}" target="_blank">{{i.titre}}</a> <br> {{i.tarif}} € <br>ID
+                    N°{{i.id}}
                 </p>
             </div>
             <div class="delmodifdetail">
@@ -19,5 +20,6 @@
         {% endfor %}
     </div>
 </body>
+
 </html>
 {% endblock %}
